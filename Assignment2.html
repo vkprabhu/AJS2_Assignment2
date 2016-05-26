@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+	<script type="text/javascript">
+		function outer(a) {
+			function inner(c) {
+				return function() {
+					return a * c;
+				}
+			}
+			return inner(10);
+		}
+		var result = outer(8);
+		alert( "Product: " + result());
+	</script>
+	</body>
+</html>
